@@ -1,0 +1,123 @@
+/* 전역 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    visibility: hidden; /* 초기에는 숨겨둠 */
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+/* 페이지 콘텐츠 스타일 */
+.container {
+    padding-top: 80px; /* 네비게이션 바가 겹치지 않게 여백 추가 */
+}
+
+/* 섹션 스타일 */
+section {
+    padding: 50px;
+    margin: 50px 0;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 프로젝트 썸네일 스타일 */
+.project-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    width: 150px;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project:hover {
+    background-color: #2980b9;
+}
+
+/* 버튼 스타일 */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.buttons button:hover {
+    background-color: #2980b9;
+}
+
+/* 애니메이션 효과 */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out;
+}
+
+/* 네비게이션 바가 표시될 때 */
+#navbar.visible {
+    visibility: visible;
+    opacity: 1;
+}
